@@ -35,9 +35,29 @@ export default function About() {
 
         <div className="space-y-4">
           {siteContent.bio.map((paragraph, i) => (
-            <p key={i} className="text-lg text-[#1a1816]/80 leading-relaxed font-light">
-              {paragraph}
-            </p>
+            <div key={i} className="space-y-2">
+              {paragraph.split('\n').map((line, idx) => {
+                if (!line.trim()) {
+                  return <div key={idx} className="h-2" />;
+                }
+                if (line.startsWith('- ')) {
+                  return (
+                    <div
+                      key={idx}
+                      className="pl-4 text-base sm:text-lg text-[#1a1816]/90 font-mono flex items-center gap-2"
+                    >
+                      <span className="text-[#c26a3f]">-</span>
+                      <span>{line.slice(2)}</span>
+                    </div>
+                  );
+                }
+                return (
+                  <p key={idx} className="text-lg text-[#1a1816]/80 leading-relaxed font-light">
+                    {line}
+                  </p>
+                );
+              })}
+            </div>
           ))}
         </div>
 

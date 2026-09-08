@@ -4,8 +4,8 @@ export const siteContent = {
   role: 'Engineer & Builder',
   tagline: 'Solving one problem at a time.',
   bio: [
-    "Professionally, manufacturing machine/business intelligence and finance gives me a kick. Numbers, data, and facts over vibes.",
-    "Outside of work, I'm usually chasing a ball: tennis 🎾, basketball 🏀, volleyball 🏐, soccer ⚽, squash 🏸, or chasing a personal record on a run 🏃. Long walks and good books 📚 keep me grounded."
+    "Industrial Data/Business Intelligence and finance gives me a kick! Numbers, data and facts over vibes anyday! (Not silly over-optimization though)",
+    "Outside of work, I'm usually chasing a ball:\n- tennis 🎾\n- basketball 🏀\n- volleyball 🏐\n- soccer ⚽\n- squash ⚫\n\nOr chasing a personal record on a run 🏃.\nLong walks & good books 📚 keep me grounded."
   ],
   quote: "Channel the energy of thought and action into rapid, decisive and exceptional execution! ⚔️",
   currently: {

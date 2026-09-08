@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
           <p className="text-lg sm:text-xl text-[#8a8078] mb-4 font-light">
             <span className="text-[#1a1816]/50 text-sm font-mono">
-              or Mahi (nickname)
+              you can also call me Mahi (nickname).
             </span>
           </p>
           <p className="text-xl sm:text-2xl font-medium text-[#1a1816] mt-6 tracking-tight">
