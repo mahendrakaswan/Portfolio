@@ -7,36 +7,35 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center relative px-6">
       <div className="max-w-3xl mx-auto w-full">
-        {/* Profile photo above intro, zoomed into face, enlarged circle */}
-        <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-[#e8e2d9] shadow-md mb-8">
-          <Image
-            src="/profile.jpg"
-            alt={siteContent.name}
-            fill
-            className="object-cover scale-[1.75] origin-[50%_48%]"
-            sizes="(max-width: 640px) 160px, 208px"
-            priority
-          />
-        </div>
+        {/* Picture and intro standing parallel next to each other with generous spacing */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10 sm:gap-14 md:gap-16">
+          {/* Profile photo: slightly bigger with slight shadow */}
+          <div className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 shrink-0 rounded-full overflow-hidden border-2 border-[#e8e2d9] shadow-lg shadow-[#1a1816]/10">
+            <Image
+              src="/profile.jpg"
+              alt={siteContent.name}
+              fill
+              className="object-cover scale-[1.75] origin-[50%_48%]"
+              sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, 224px"
+              priority
+            />
+          </div>
 
-        <div>
-          <p className="font-mono text-sm text-[#8a8078] mb-3">
-            hi, i&apos;m
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1a1816] mb-2 tracking-tight">
-            Mahendra Kaswan.
-          </h1>
-          <p className="text-lg sm:text-xl text-[#8a8078] mb-4 font-light">
-            <span className="text-[#1a1816]/50 text-sm font-mono">
-              you can also call me Mahi (nickname).
-            </span>
-          </p>
-          <p className="text-xl sm:text-2xl font-medium text-[#1a1816] mt-6 tracking-tight">
-            {siteContent.role}
-          </p>
-          <p className="text-lg sm:text-xl text-[#8a8078] mt-2 font-light max-w-lg">
-            {siteContent.tagline}
-          </p>
+          {/* Introduction section */}
+          <div className="flex-1">
+            <p className="font-mono text-sm text-[#8a8078] mb-2">
+              hi, i&apos;m
+            </p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1a1816] mb-3 tracking-tight">
+              Mahendra Kaswan.
+            </h1>
+            <p className="text-xl sm:text-2xl font-medium text-[#1a1816] mt-4 tracking-tight">
+              {siteContent.role}
+            </p>
+            <p className="text-base sm:text-lg text-[#8a8078] mt-2 font-light max-w-lg">
+              {siteContent.tagline}
+            </p>
+          </div>
         </div>
 
         {/* Scroll indicator */}
